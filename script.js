@@ -109,7 +109,7 @@ const searchPokemon = POKEMON => {
         CONTAINER.innerHTML = ''
 
         if(e.target.value.length >= 1) {
-            const filteredPokemons = POKEMON.filter(pokemon => pokemon.name.includes(e.target.value))
+            const filteredPokemons = POKEMON.filter(pokemon => pokemon.name.includes(e.target.value.toLowerCase()))
 
             if(filteredPokemons.length >= 1) {
                 document.querySelector('.no-results').classList.add('hide')
